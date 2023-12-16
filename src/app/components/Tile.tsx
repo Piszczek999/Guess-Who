@@ -29,7 +29,7 @@ export default function Tile({
             height={90}
             draggable="false"
           />
-          <p className="text-center mb-2">{name}</p>
+          <p className="text-center mb-2 md:text-base text-[2.5vw]">{name}</p>
         </>
       ) : (
         <div className="w-[62px] h-[104px]"></div>
