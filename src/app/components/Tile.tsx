@@ -10,13 +10,17 @@ export default function Tile({ name }: { name: string }) {
   };
   return (
     <div onClick={onClick}>
-      <Image
-        src={`/${name}.png`}
-        alt={name}
-        width={62}
-        height={104}
-        className={disabled ? "opacity-20" : ""}
-      />
+      {name ? (
+        <Image
+          src={`/${name}.png`}
+          alt={name}
+          width={62}
+          height={104}
+          className={disabled ? "opacity-20" : ""}
+        />
+      ) : (
+        <div className="w-[62px] h-[104px]"></div>
+      )}
     </div>
   );
 }
