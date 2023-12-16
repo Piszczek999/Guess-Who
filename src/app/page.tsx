@@ -26,10 +26,15 @@ const people = [
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-7">
-      {people.map((person) => (
-        <Tile name={person} />
-      ))}
+    <main className="flex flex-col items-center bg-sky-200 h-screen">
+      <div className="grid grid-cols-7 w-[434px] shadow-xl p-2 bg-white">
+        {people.map((person) => (
+          <Tile key={person} name={person} />
+        ))}
+      </div>
+      <div className="shadow-xl p-2 bg-white">
+        <Tile name={people[Math.floor(Math.random() * people.length)]} />
+      </div>
     </main>
   );
 }
