@@ -23,7 +23,27 @@ const people = [
   "Karl",
   "Erika",
   "Karsten",
-  "Conrad",
+  // "Conrad",
+  "Eve",
+  "Lucas",
+  "Lily",
+  "Anthony",
+  "Ellie",
+  "Matt",
+  "Heidi",
+  "Mason",
+  "Eliana",
+  "Ethan",
+  "Ruby",
+  "Jack",
+  "Bonnie",
+  "Joshua",
+  "Zoe",
+  "Harvey",
+  "Stella",
+  "Jasper",
+  "Aaliyah",
+  "Alex",
 ];
 
 export default function Home() {
@@ -36,18 +56,18 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center bg-sky-200 h-screen gap-2">
-      <div className="grid grid-cols-7 max-w-[434px] shadow-xl p-2 bg-white w-full">
+      <div className="grid grid-cols-10 md:max-w-[660px] shadow-xl p-2 bg-white w-full">
         {people.map((person) => (
           <Tile key={person} name={person} />
         ))}
       </div>
       <div className="shadow-xl p-2 bg-white flex flex-col items-center">
         <p className="">Twoja postać</p>
-        <Tile name={chosen} />
+        <Tile name={chosen} chosen />
       </div>
       <button
         onClick={handleNewPeson}
-        className="p-2 bg-blue-600 text-white rounded-lg shadow-xl"
+        className="p-2 bg-blue-600 text-white rounded-lg shadow-xl hover:bg-blue-700"
       >
         Wylosuj postać
       </button>
